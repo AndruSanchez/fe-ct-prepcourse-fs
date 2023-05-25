@@ -7,6 +7,10 @@ function elevarAlCuadrado(num) {
    // Retorna el valor de "num" elevado al cuadrado.
    // Tu código:
    return Math.pow(num,2);
+
+   // se puede hacer asi: la diferencia es que guardamos los resultados en una variable para usarlo
+   // var numCuadrado = Marh.pow(num,2);  
+   // return numCuadrado;
 }
 
 function elevarAlCubo(num) {
@@ -36,7 +40,7 @@ function redondearHaciaArriba(num) {
 function numeroRandom() {
    // Genera un número al azar entre 0 y 1 y retórnalo.
    // Tu código:
-   return Math.random();
+   return Math.random();   // al ejecutarse la funcion retorna un numero random, no recibe ningun valor
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
