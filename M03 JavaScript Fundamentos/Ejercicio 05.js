@@ -19,6 +19,27 @@ function esPositivo(num) {
    {
       return (false);
    }
+   /* de una manera mas especifica:
+
+    if(num>0)
+   {
+      return ("Es positivo");
+   } else if (num <0) 
+   {
+      return ("Es negativo");
+   } else  if ( num === 0)
+   {
+      return (false);
+   }  */
+
+   /* ----------------------------------------------------
+   los {} y () no son necesarios allí, sin embargo los usamos para que sea mucho mas legible:
+   
+   if(num>0) return "Es positivo";
+   else if (num <0) return "Es negativo";
+   else  if ( num === 0) return false; 
+
+   */
 
 }
 
@@ -26,8 +47,10 @@ function agregarSimboloExclamacion(str) {
    // Agrega un símbolo de exclamación al final del string "str" y retórnalo
    // Ejemplo: "hello world" ---> "hello world!"
    // Tu código:
-   return str + "!";
+   return str + "!";    // se usa el + para concatenar strings
 }
+
+console.log(agregarSimboloExclamacion("Hola Mundo"));     // demostración de como ver en pantalla si la función ha quedado bien
 
 function combinarNombres(nombre, apellido) {
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
@@ -54,6 +77,7 @@ function retornarPerimetro(lado) {
    // Debes retornar su perímetro.
    // Tu código:
    return ( lado + lado + lado +lado);
+   // ó return (lado*4);
 }
 
 function areaDelTriangulo(base, altura) {
@@ -93,6 +117,19 @@ function esVocal(letra) {
    {
       return ("Dato incorrecto");
    }
+
+/* otra manera:
+   if ( letra.length >1 ) return "Dato incorrecto";
+   if (letra==="a") return ("Es vocal");
+   if (letra==="e") return ("Es vocal");
+   if (letra==="i") return ("Es vocal");
+   if (letra==="o") return ("Es vocal");
+   if (letra==="u") return ("Es vocal");
+   return ("Dato incorrecto");
+
+*/
+
+
 
 }
 
