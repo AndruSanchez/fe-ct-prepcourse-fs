@@ -4,9 +4,9 @@
 function devolverString(string) {
    // Debe retornar un string.
    // Tu código:
-   return string;
-}
-
+   return string;                 // el punto y coma ";" no es obligatorio colocarlo al final, pero si es una buena practica para
+}                                  // ir incorporando ya que eso denota que una linea de código termina allí, la funcionalidad como tal
+                                    // hace el código mas legible y evita errores
 // ⛔️ "X" e "Y" son números.
 
 function suma(x, y) {

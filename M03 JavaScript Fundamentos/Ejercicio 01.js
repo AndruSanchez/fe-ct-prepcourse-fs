@@ -5,7 +5,7 @@
 // por el correspondiente.
 
 // Crea una variable de tipo string.
-const nuevoString = "null";
+const nuevoString = "null";         // const = es la creacion de una variable que no cambia
 
 // Crea una variable de tipo number.
 const nuevoNumero = 8;
