@@ -15,6 +15,18 @@ function crearGato(nombre, edad) {
    };
    return gato;
 
+   /*  otra manera de hacer la funcion ( funcion flecha)
+
+     var gato = {
+      nombre: nombre, edad: edad,
+      meow: () => {
+         return("Meow!");
+      }
+   };
+   return gato; 
+   
+   */
+
 
 }
 
