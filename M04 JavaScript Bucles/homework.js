@@ -185,7 +185,8 @@ function esPrimo(num) {
        return false;
      }
    }
-   return true;
+   return true;          //Si quieres saber si un numero es primo no debe tener divisiores menores que él.
+
 }
 
 function esVerdadero(valor) {
@@ -200,8 +201,18 @@ function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
-   if(num>99 && num <999){return(true);}
+   if(num>99 && num <1000){return(true);}
    else {return(false);}
+
+   //   ó
+   // if(num>=100 && num <=999){return(true);}
+   // else {return(false);}
+   //
+   //    ó
+   // 
+   // const num2 = toString(num);
+   // if (num2.length === 3) return true;
+   // return false;
 }
 
 function doWhile(num) {
