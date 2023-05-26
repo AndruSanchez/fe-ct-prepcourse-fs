@@ -8,6 +8,16 @@ function obtenerMayor(x, y) {
 
    return Math.max(x,y);
 
+   // otra manera:
+   // if (x>y) {return x;
+   // }if else (x<y) {return y;
+   // }if else (x === y) {return x;
+   // }else {return ("no es un número";)}
+
+
+   // una forma resumida es:
+   // return x>=y?x:y;
+
 }
 
 function mayoriaDeEdad(edad) {
@@ -15,8 +25,7 @@ function mayoriaDeEdad(edad) {
    // Si tiene 18 años ó más debe retornar el string: "Allowed".
    // Caso contrario: "Not allowed".
    // Tu código:
-if (edad>=18) {
-return ("Allowed");}
+if (edad>=18) { return ("Allowed");}
 else { return ("Not allowed");}
    
 }
@@ -28,9 +37,9 @@ function conection(status) {
    // De lo contrario, presumimos que el usuario está "Offline".
    // Retornar el estado de conexión del usuario.
    // Tu código:
-   if (status == 1) 
+   if (status === 1) 
    {  return ("Online"); }
-      else if (status == 2) { return ("Away"); }
+      else if (status === 2) { return ("Away"); }
       else { return("Offline");}
 }
 
@@ -70,6 +79,20 @@ function colors(color) {
          break;
       default: return("Color not found");
    }
+
+   /* otra forma de verlo 
+   switch (color) {
+      case "blue": 
+         return("This is blue");
+      case "red": 
+         return("This is red");
+      case "green": 
+         return("This is green");
+      case "orange": 
+         return("This is orange");
+      default:
+         return("Color not found");
+   */
 }
 
 function esDiezOCinco(num) {
@@ -78,6 +101,9 @@ function esDiezOCinco(num) {
    // Tu código:
    if(num === 10 || num === 5) {return(true);}
    else {return(false);}
+
+   // manera de hacerlo tambien:
+//   return num === 10 || num === 5;
 }
 
 function estaEnRango(num) {
@@ -86,6 +112,9 @@ function estaEnRango(num) {
    // Tu código:
    if(num<50 && num>20) {return(true);}
    else {return(false);}
+
+   // otra manera:
+   // return num<50 && num>20;
 }
 
 function esEntero(num) {
@@ -97,6 +126,15 @@ function esEntero(num) {
    // Tu código:
    if (num % 1 === 0) {return(true);}
    else {return(false);}
+
+   /* otra manera:
+    return num % 1 === 0; 
+
+    ó
+    
+    if (Number.isInteger(num)) return true;
+    else return false;
+   */
 }
 
 function fizzBuzz(num) {
@@ -124,6 +162,14 @@ else if (num1 < 0 || num2 < 0 || num3 < 0) {return ("Hay negativos");}
 else if (num3 > num1 && num3 > num2 ) {return(num3=num3+1);}
 else if (num3 === 0 && num2 === 0 && num1 === 0){return("Error");}
 else {return(false);}
+
+// otra manera de hacerlo: el Math.sign() compara el signo con el que estemos igualando.
+// if (num1 > num2 && num1 > num3 && Math.sign(num1) === 1) {return ("Numero 1 es mayor y positivo");}
+// if (Math.sign (num1 || num2 || num3) === -1) {return ("Hay negativos");}
+// if (num3 > (num1 && num2)) {return(num3=num3+1);}
+// if ((num3 && num2 && num1) === 0 ){return("Error");}
+// return(false);
+
 }
 
 function esPrimo(num) {
