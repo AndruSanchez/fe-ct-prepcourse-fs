@@ -35,8 +35,8 @@ function nuevoUsuario(nombre, email, password) {
    // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
    // Retornar el objeto.
    // Tu código:
-   var Objeto = {nombre: nombre, email: email, password: password}
-   return Objeto;
+   var usuario = {nombre: nombre, email: email, password: password}
+   return usuario;
 }
 
 function agregarPropiedad(objeto, propiedad) {
@@ -45,6 +45,8 @@ function agregarPropiedad(objeto, propiedad) {
    // Esta propiedad será igual al valor `null`.
    // Retornar el objeto.
    // Tu código:
+   objeto[propiedad] = null;         // se una el metodo bracket-notation: entender que resive una variable
+   return objeto;                      
 }
 
 function invocarMetodo(objeto, metodo) {
@@ -52,37 +54,70 @@ function invocarMetodo(objeto, metodo) {
    // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
    // [NOTA]: no necesitar retornar nada.
    // Tu código:
+
+   objeto[metodo]();   // con bracket-notation va a buscar una propiedad que tenga lo que sea que este guardado en esa variable
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
    // El parámetro "objetoMisterioso" posee una propiedad con el nombre "numeroMisterioso".
    // Debes multiplicar este número por 5 y retornar el resultado.
    // Tu código:
+   return objetoMisterioso.numeroMisterioso * 5;      // ya con el objetoMisterioso.numeroMisterioso invocamos el número 
+
+   // otra manera, guardando el resultado:
+
+// var resultado objetoMisterioso.numeroMisterioso * 5;
+// return resultado;
 }
 
 function eliminarPropiedad(objeto, propiedad) {
    // El parámetro "propiedad" es una propiedad del objeto que recibes.
    // Debes eliminarla del objeto y retornarlo finalmente.
    // Tu código:
+
+   if (objeto.hasOwnProperty(propiedad)) delete objeto[propiedad];
+   return objeto;
 }
 
 function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
+   if (objetoUsuario.email) {return true;}
+   else {return false};
+
+   //    Se puede obviar una parte:
+   // if (objetoUsuario.email) return true;
+   // else return false;
 }
 
 function tienePropiedad(objeto, propiedad) {
    // Verifica si el objeto recibido posee una propiedad con el mismo nombre que el parámetro "propiedad".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
+   if (objeto.hasOwnProperty(propiedad)) return true;
+   return false;
+   /*  una manera mas rápida: solo arroja un true o false.
+
+    return objeto.hasOwnProperty(propiedad);
+    */
+
 }
 
 function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
+
+   if (objetoUsuario.password === password) return true;
+   else return false;
+
 }
+
+// para verificar que esta bien:
+var objetoUsuario = { username: "Daniel", password: "123"}
+
+console.log(verificarPassword(objetoUsuario, "123"));
 
 function actualizarPassword(objetoUsuario, nuevaPassword) {
    // Reemplaza la contrseña guardada en la propiedad "password" del "objetoUsuario".
