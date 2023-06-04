@@ -201,8 +201,8 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    }
    return objetoProducto;
 
-   // al parecer cuando es un calculo y queremos usar el resultado, se debe retornar adentro 
-   //para ser guardado y usado en el exterior de la funcion
+   // toda funcion debe retornar la logica que hayas realizado dentro de ella;
+   //  de no ser así..  devuelve (return) undefine.
 
 
 }
