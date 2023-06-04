@@ -45,7 +45,7 @@ function agregarPropiedad(objeto, propiedad) {
    // Esta propiedad será igual al valor `null`.
    // Retornar el objeto.
    // Tu código:
-   objeto[propiedad] = null;         // se una el metodo bracket-notation: entender que resive una variable
+   objeto[propiedad] = null;         // se una el metodo bracket-notation: entender que recibe una variable
    return objeto;                      
 }
 
