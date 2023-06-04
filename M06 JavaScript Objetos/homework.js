@@ -155,6 +155,16 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
 
 }
 
+// un ejemplo de un arreglo de objetos con la propiedad llamada esPremium es:
+
+// var usuarios = [
+//    { esPremium: false },
+//    { esPremium: false },
+//    { esPremium: false },
+//    { esPremium: false },
+//    { esPremium: false },
+// ]
+
 function sumarLikesDeUsuario(objetoUsuario) {
    // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
    // Este arreglo contiene objetos (post).
@@ -167,6 +177,12 @@ function sumarLikesDeUsuario(objetoUsuario) {
    }
    
    return sumar;
+}
+
+// par poder observar mejor dicho objeto con la porpiedad posts:
+
+var objetoUsuario = {
+   posts: [{likes:1},{likes:12},{likes:4},{likes:0}],
 }
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
