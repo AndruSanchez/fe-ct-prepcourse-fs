@@ -181,9 +181,9 @@ function sumarLikesDeUsuario(objetoUsuario) {
 
 // par poder observar mejor dicho objeto con la porpiedad posts:
 
-var objetoUsuario = {
-   posts: [{likes:1},{likes:12},{likes:4},{likes:0}],
-}
+// var objetoUsuario = {
+//    posts: [{likes:1},{likes:12},{likes:4},{likes:0}],
+// }
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
    // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
@@ -200,6 +200,9 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
       return objetoProducto.precio - objetoProducto.precio * objetoProducto.porcentajeDeDescuento;
    }
    return objetoProducto;
+
+   // al parecer cuando es un calculo y queremos usar el resultado, se debe retornar adentro 
+   //para ser guardado y usado en el exterior de la funcion
 
 
 }
