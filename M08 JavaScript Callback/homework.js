@@ -16,13 +16,13 @@ function mayuscula(nombre) {
       throw new Error("No recibio parametro");
    }
  
-   // convertir la primera letra en mayuscula y concatenar el resto del nombre:
-   // var primeraLetra = nombre.charAt(0).toUpperCase();  //chartAt selecciona la letra del indice 0
-   // var restoNombre =nombre.slice(1);             // toUpperCase la convierte en mayuscula
-   //                                              //slice selecciona el string desde el indice que se le señala (1) no toma en cuenta la primera letra del indice 0
-   // return primeraLetra + restoNombre;
+   //convertir la primera letra en mayuscula y concatenar el resto del nombre:
+   var primeraLetra = nombre.charAt(0).toUpperCase();  //chartAt selecciona la letra del indice 0
+   var restoNombre =nombre.slice(1);             // toUpperCase la convierte en mayuscula
+                                                //slice selecciona el string desde el indice que se le señala (1) no toma en cuenta la primera letra del indice 0
+   return primeraLetra + restoNombre;
 
-   return nombre.charAt(0).toUpperCase() + nombre.slice(1)
+   // return nombre.charAt(0).toUpperCase() + nombre.slice(1)
 
 
 }
