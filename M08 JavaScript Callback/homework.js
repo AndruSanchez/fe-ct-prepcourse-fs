@@ -29,15 +29,29 @@ function mayuscula(nombre) {
 
 function invocarCallback(cb) {
    // Invoca/ejecuta el callback `cb`.
-   // [NOTA]: no debes reotrnar nada.
+   // [NOTA]: no debes reotornar nada.
    // Tu código:
+
+cb();
+
 }
+
+// algo similar pero avanzado para entender alli:
+// function suma(num,num2){
+//    return num + num2;
+// }
+
+// var resultado = invocarCallback(suma())
+
+// resultado();
 
 function operacionMatematica(num1, num2, cb) {
    // En este ejercicio recibirás dos números y un callback.
    // El callback realiza una operación matemática, por lo que necesita de los dos números.
    // Retorna el resultado del callback pasándole como parámetros los números.
    // Tu código:
+
+   return cb(num1,num2);
 }
 
 function sumarArray(arrayOfNumbers, cb) {
@@ -46,13 +60,28 @@ function sumarArray(arrayOfNumbers, cb) {
    // Este resultado debes pasárselo como argumento al callback recibido.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
+
+   var sumaTotal = 0;
+   for(var i = 0; i<arrayOfNumbers.length; i++) {
+      sumaTotal = sumaTotal + arrayOfNumbers[i];
+   }
+
+   cb(sumaTotal);
 }
+
+//para entender un poco mejor:
+// var arrayOfNumbers = [1,2,3]
+// var cb = function(e) {
+//    return e*e }
+
 
 function forEach(array, cb) {
    // Recibes un arreglo y un callback.
    // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
    // Debes pasarle el elemento como argumento al callback.
    // Tu código:
+
+   
 }
 
 function map(array, cb) {
