@@ -5,6 +5,26 @@ function mayuscula(nombre) {
    // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
+
+   
+
+   if(typeof nombre !== "string") {                // typeof para validar si un dato es un tipo de dato especifico
+      throw new Error("El argumento debe ser un string");
+   }
+
+   if(nombre.length === 0){
+      throw new Error("No recibio parametro");
+   }
+ 
+   // convertir la primera letra en mayuscula y concatenar el resto del nombre:
+   // var primeraLetra = nombre.charAt(0).toUpperCase();  //chartAt selecciona la letra del indice 0
+   // var restoNombre =nombre.slice(1);             // toUpperCase la convierte en mayuscula
+   //                                              //slice selecciona el string desde el indice que se le señala (1) no toma en cuenta la primera letra del indice 0
+   // return primeraLetra + restoNombre;
+
+   return nombre.charAt(0).toUpperCase() + nombre.slice(1)
+
+
 }
 
 function invocarCallback(cb) {
