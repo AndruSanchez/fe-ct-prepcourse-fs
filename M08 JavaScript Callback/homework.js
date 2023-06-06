@@ -114,7 +114,23 @@ function filter(arrayOfStrings) {
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
 
-   return  arrayOfStrings.filter((e) => e.startsWith("a"));   // startsWith agarra los elementos que comienzan con ("a")
+   // 1:
+   var newArray = [];
+
+   for ( var i = 0; i < arrayOfStrings.length; i++){
+      if( arrayOfStrings[i].charAt(0) === "a"){
+         newArray.push(arrayOfStrings[i]);
+      }
+   }
+   return newArray
+   // 2: manera mas simplificada:
+
+   // return  arrayOfStrings.filter((e) => e.startsWith("a"));   // startsWith agarra los elementos que comienzan con ("a")
+   // el metodo filter al igual que el map retorna un nuevo arreglo
+
+   // ó  
+   // var newArray = arrayOfStrings.filter((number) => number.charAt(0) === "a");
+   // return newArray;
 
 }
 
