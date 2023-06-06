@@ -81,20 +81,35 @@ function forEach(array, cb) {
    // Debes pasarle el elemento como argumento al callback.
    // Tu código:
 
+   array.forEach(e => cb(e));  // e num number element : es basicamente el elemento que recorre del arreglo
    
 }
 
-function map(array, cb) {
+// para ver un ejemplo de lo que se ejecuta internamente en la funcion:
+// var array = [2,3,4];
+// function cb(e){
+//    return e*e
+// }    
+// un ejemplo mas claro: en el work 
+
+
+
+function map(array, cb) {          // cabe destacar que cuando sacan estos enunciados, el arreglo y el callback ya estan creados.
    // Debes iterar sobre el arreglo, y cada elemento pasárselo como arguemento al callback.
    // Tiene que guardar el resultado devuelto por el callback en cada elemento dentro de un nuevo arreglo.
    // Retorna el nuevo arreglo.
    // Tu código:
+   return array.map((e) => cb(e));
+
+
 }
 
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
+
+   return  arrayOfStrings.filter((e) => e.startsWith("a"));   // startsWith agarra los elementos que comienzan con ("a")
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
