@@ -101,6 +101,11 @@ function map(array, cb) {          // cabe destacar que cuando sacan estos enunc
    // Tu código:
    return array.map((e) => cb(e));
 
+   // ó 
+   // var newArray = array.map(function(e) {
+   // return cb(e);
+   //    }
+
 
 }
 
@@ -110,6 +115,7 @@ function filter(arrayOfStrings) {
    // Tu código:
 
    return  arrayOfStrings.filter((e) => e.startsWith("a"));   // startsWith agarra los elementos que comienzan con ("a")
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
