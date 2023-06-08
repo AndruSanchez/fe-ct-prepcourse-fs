@@ -100,7 +100,35 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+   for(var i =0; i<arrayOfStrings.length-1;i++) {
+      var siguiente;
+
+         for(var j=0;j<arrayOfStrings.length -1;j++) {
+
+            if(arrayOfStrings[j].length > arrayOfStrings[j + 1].length) {
+
+               siguiente = arrayOfStrings[j+1];
+
+               arrayOfStrings[j+1]=arrayOfStrings[j];
+
+               arrayOfStrings[j] = siguiente;
+            }
+         }
+   }
+   return arrayOfStrings;
+
+   // otro metodo:
+   /*
+   
+   return arrayOfStrings.sort(function (a,b){
+      return (a.length - b.length)
+   })
+
+   */
+
 }
+
+
 
 function buscoInterseccion(array1, array2) {
    // Recibes dos arreglos de números.
@@ -109,6 +137,15 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
+var newArray = [];
+   for(var i =0; i<array1.length;i++) {
+      for(var z =0; z<array2.length; z++){
+         if(array1[i] === array2[z]) {
+            newArray.push(array1[i]);
+         }
+      }
+}
+ return newArray;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
