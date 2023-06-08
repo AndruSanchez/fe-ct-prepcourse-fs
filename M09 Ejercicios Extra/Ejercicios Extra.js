@@ -60,20 +60,39 @@ function asAmirror(frase) {
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
 
-   
+   var palabras = frase.split(" ");
+   for(var i = 0; i < palabras.length; i++){
+      palabras[i] = palabras[i].split("").reverse().join("");
+   }
+   var resultado = palabras.join(" ");
+   return resultado;
 }
+//console.log(asAmirror("The Henry Challenge is close!"));
 
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+   var str = numero.toString();
+  for ( var i = 0; i<str.length; i++) {
+   if(str[i] !== str[str.length - 1 - i]) {
+      return "No es capicua";
+   }
+  }
+  return "Es capicua";
+
 }
+//console.log(capicua(5111115))
 
 function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
    // Retorna el string sin estas letras.
    // Tu código:
+   var newString = string.split("a").join("").split("b").join("").split("c").join("");
+   return newString;
+      
 }
+//console.log(deleteAbc("hola como estaba"))
 
 function sortArray(arrayOfStrings) {
    // Recibes un arreglo de strings.
