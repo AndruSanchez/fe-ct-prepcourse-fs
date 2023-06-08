@@ -100,8 +100,8 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
-   for(var i =0; i<arrayOfStrings.length-1;i++) {
-      var siguiente;
+   for(var i =0; i<arrayOfStrings.length-1;i++) {     // se utiliza dos ciclos for, uno para ir agregando los elementos
+      var siguiente;                                  // el otro para ir encontrando los de menor longitud
 
          for(var j=0;j<arrayOfStrings.length -1;j++) {
 
@@ -120,8 +120,9 @@ function sortArray(arrayOfStrings) {
    // otro metodo:
    /*
    
-   return arrayOfStrings.sort(function (a,b){
-      return (a.length - b.length)
+   return arrayOfStrings.sort(function (a,b){         /7  sort compara valores y ordena
+      return (a.length - b.length)          // ordena de forma acendente 
+                                             // b.length - a.length    ordena de forma decendente 
    })
 
    */
