@@ -100,36 +100,51 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
-   for(var i =0; i<arrayOfStrings.length-1;i++) {     // se utiliza dos ciclos for, uno para ir agregando los elementos
-      var siguiente;                                  // el otro para ir encontrando los de menor longitud
+   // for(var i =0; i<arrayOfStrings.length-1;i++) {     // se utiliza dos ciclos for, uno para ir agregando los elementos
+   //    var siguiente;                                  // el otro para ir encontrando los de menor longitud
 
-         for(var j=0;j<arrayOfStrings.length -1;j++) {
+   //       for(var j=0;j<arrayOfStrings.length -1;j++) {
 
-            if(arrayOfStrings[j].length > arrayOfStrings[j + 1].length) {
+   //          if(arrayOfStrings[j].length > arrayOfStrings[j + 1].length) {
 
-               siguiente = arrayOfStrings[j+1];
+   //             siguiente = arrayOfStrings[j+1];
 
-               arrayOfStrings[j+1]=arrayOfStrings[j];
+   //             arrayOfStrings[j+1]=arrayOfStrings[j];
 
-               arrayOfStrings[j] = siguiente;
-            }
-         }
-   }
-   return arrayOfStrings;
+   //             arrayOfStrings[j] = siguiente;
+   //          }
+   //       }
+   // }
+   // return arrayOfStrings;
 
-   // otro metodo:
+   // otro metodo mas eficiente:
    /*
    
-   return arrayOfStrings.sort(function (a,b){         /7  sort compara valores y ordena
-      return (a.length - b.length)          // ordena de forma acendente 
-                                             // b.length - a.length    ordena de forma decendente 
+   return arrayOfStrings.sort(function (a,b){         //  sort compara valores y ordena
+      return (a.length - b.length)                   // esta linea de código ordena de forma ascendente 
+                                                   // b.length - a.length   -> ordena de forma decendente 
    })
 
    */
 
+
+
+   // otra manera de hacerlo:
+   let arrayOrdenado = [];
+
+   for(let i=0; i<arrayOfStrings.length; i++) {
+      let min= Infinity;
+      let aux= 0;
+      for(let j=0; j<arrayOfStrings.length; j++) {
+         if(arrayOfStrings[j].length < min && !arrayOrdenado.includes(arrayOfStrings[j])) {
+            min = arrayOfStrings[j].length;
+            aux=j;
+         }
+      }
+      arrayOfStrings.push(arrayOfStrings[aux])
+   }
+   return arrayOrdenado;
 }
-
-
 
 function buscoInterseccion(array1, array2) {
    // Recibes dos arreglos de números.
