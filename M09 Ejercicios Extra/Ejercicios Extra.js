@@ -100,29 +100,31 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
-   
-/*
-   for(var i =0; i<arrayOfStrings.length-1;i++) {     // se utiliza dos ciclos for, uno para ir agregando los elementos
-      var siguiente;                                  // el otro para ir encontrando los de menor longitud
 
-         for(var j=0;j<arrayOfStrings.length -1;j++) {
-               if(arrayOfStrings[j].length > arrayOfStrings[j + 1].length) {
-                  siguiente = arrayOfStrings[j+1];
-                  arrayOfStrings[j+1]=arrayOfStrings[j];
-                  arrayOfStrings[j] = siguiente;
-            }
+   // mas entendible:
+
+   for(let i = 0; i<arrayOfStrings.length - 1 ;i++) {
+      for(let j = i + 1; j<arrayOfStrings.length; j++) {
+         if (arrayOfStrings[j].length<arrayOfStrings[i].length){
+               let stringMasCorto = arrayOfStrings[j];
+               arrayOfStrings[j] = arrayOfStrings[i];
+               arrayOfStrings[i] = stringMasCorto;
          }
+      }
    }
-   return arrayOfStrings;  */
+   return arrayOfStrings;
 
-   // otro metodo mas eficiente:
+   // otro método mas eficiente:
    
-   
+   /*
    return arrayOfStrings.sort(function (a,b){         //  sort compara valores y ordena
       return (a.length - b.length)                   // esta linea de código ordena de forma ascendente 
                                                    // b.length - a.length   -> ordena de forma decendente 
-   })  
+   })   */
 }
+
+let array = ["looking", "You", "beautiful", "are"]
+console.log(sortArray(array));
 
 function buscoInterseccion(array1, array2) {
    // Recibes dos arreglos de números.
